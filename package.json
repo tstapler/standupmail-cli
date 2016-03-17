@@ -1,0 +1,25 @@
+{
+  "name": "standupmail-cli",
+  "version": "0.1.0",
+  "description": "StandupMail command line client.",
+  "repository": {
+    "type": "git",
+		"url": "http://github.com/ericlarssen/standupmail-cli.git"
+  },
+  "bin": {
+    "standup": "./index.js"
+  },
+  "bugs": {
+    "url": "http://github.com/ericlarssen/standupmail-cli/issues"
+  },
+  "author": "Eric Larssen <elarssen91@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "configstore": "^2.0.0",
+    "crypto-js": "^3.1.6",
+    "lodash": "^4.6.1",
+    "superagent": "^1.8.1",
+    "yargs": "^4.3.1"
+  },
+  "keywords": ["standupmail"]
+}
