@@ -17,7 +17,7 @@ var TEAMS_URL = '/api/external/v1/teams';
 var DIGEST_URL = '/api/external/v1/teams/%s/digests?start_date=%s&end_date=%s';
 var UPDATE_URL = '/api/external/v1/teams/%s/messages';
 
-var argv = require('yargs')
+var cli = require('yargs')
   .usage('Usage: $0 <command> [options]')
   .command(
     'login',
@@ -152,7 +152,12 @@ var argv = require('yargs')
     }
   )
   .help()
-  .argv;
+
+var argv = cli.argv
+
+if(argv._.length == 0){
+  cli.showHelp()
+}
 
 function getTeams(id, token) {
   var date = new Date();
